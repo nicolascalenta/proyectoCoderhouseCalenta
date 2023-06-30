@@ -1,0 +1,207 @@
+$primary-color: #FF0000;
+$font-size-heading: 24px;
+
+
+
+@mixin image-right($image-path, $image-width, $image-height) {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: percentage($image-height / $image-width);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.imagenindex {
+  @include image-right("path/to/image.jpg", 800px, 600px);
+}
+
+
+
+
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-image: radial-gradient(circle at 37.72% -19.64%, #f964e7 0, #e258eb 12.5%, #c64dee 25%,
+     #a443f0 37.5%, #783cf2 50%, #2a38f4 62.5%, #0039f5 75%, #003af6 87.5%, #003cf7 100%) ;
+    
+}
+
+
+.container-nav {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+
+
+.item-nav {
+    border: 20px solid;
+    border-radius: 20%;
+    border-color: #783cf2;
+    width: 500px;
+    height: 100px;
+    margin: 5px;
+    font-size: 30px;
+    background-color: #2a38f4;
+    display: grid;
+    text-align: center;
+    
+}
+}
+ 
+ 
+ 
+ h1 {
+  color: $primary-color;
+  font-size: $font-size-heading;
+}
+  h2 { 
+    background-color:
+     blueviolet;} 
+
+
+    /* empleados */
+    .card {
+        border-radius: 10px;
+        min-height: 200px;
+        font-weight: bold;
+        padding: 80px;
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
+        margin-left: 80px;
+        display: grid;
+        grid-template-columns: 50% auto;
+        
+        
+    }
+    .contenedor-sobre {
+        width: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: auto auto  auto auto;
+    }
+    
+    
+    
+    
+    
+    /* platos */
+    .contenedor-comida {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr, 1fr);
+    
+	
+}
+    .card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr, 1fr);
+	
+}
+
+
+
+
+.footer {
+    
+    position:absolute;
+    padding: 1em 0;
+    bottom: 0 ; }
+
+.parrafoplato::first-line {
+    color: black;
+    font-size: 2em; 
+}
+
+
+.gridcard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .card {
+    width: 18rem;
+    
+  }
+  /* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    /* Agrega aquí tus estilos específicos para móviles */
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+   
+    body {
+      font-size: $font-size-heading;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  
+    .card {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  }
+  
+ 
+  @media (min-width: 992px) {
+    
+    body {
+      font-size: $font-size-heading;
+    }
+  
+    .container {
+      padding: 30px;
+    }
+  
+    .card {
+      width: 33.33%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  
